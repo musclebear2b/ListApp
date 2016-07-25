@@ -10,6 +10,6 @@ import Foundation
 
 class Friend: User {
     
-    
+    private var _
     
 }

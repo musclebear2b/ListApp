@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Item {
+class Item: Equatable {
     
     enum Mark {
         case UNMARKED
@@ -107,5 +107,11 @@ class Item {
     func updateItemStatus(mark: Mark) {
         self.itemMarkedStatus = mark
     }
+    
+    
 
+}
+
+func ==(lhs: Item, rhs: Item) -> Bool {
+    return ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
 }
